@@ -26,9 +26,10 @@ function starImages(rating) {
       // step 4 a
       let imageText = "";
       // step 4 b
-      for (i = 1; i <= rating; i++) {
+      for (let i = 1; i <= rating; i++) {
             // step 4 c
-            imageText += "<img src = 'star.png' alt = ''>";
+           imageText += "<img src = 'star.png' alt = ''>";
+         
       }
       // step 4 d
       return imageText;
@@ -38,7 +39,7 @@ function starImages(rating) {
 for (i = 0; i < reviewers.length; i++) {
       // step 6 a
       let reviewCode = "";
-
+     
       // step 6 b
       if (reviewType[i] == "P") {
             reviewCode += "<table class = 'prime'>"
@@ -51,11 +52,11 @@ for (i = 0; i < reviewers.length; i++) {
       }
 
       // step 6 c
-      reviewCode+= "<caption>" + reviewTitles[i] + "</caption>"
-      reviewCode+= "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>"
-      reviewCode+= "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>"
-      reviewCode+= "<tr><th>Rating</th><td>" + starImages(stars[i]) + "</td></tr>"
-      reviewCode+= "<tr><td colspan='2'>" + reviews[i] + "</td></tr></table>"
+      reviewCode+= "<caption>" + reviewTitles[i] + "</caption>";
+      reviewCode+= "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
+      reviewCode+= "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
+      reviewCode+= "<tr><th>Rating</th><td>" + starImages(stars[i]) + "</td></tr>";
+      reviewCode+= "<tr><td colspan='2'>" + reviews[i] + "</td></tr></table>";
 
       // step 6 d
       document.getElementsByTagName("article")[0].insertAdjacentHTML("beforeend",reviewCode);
